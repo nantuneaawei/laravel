@@ -15,4 +15,9 @@ class Message extends Controller
     {
         return view('message.member_login');
     }
+
+    public function register()
+    {
+        return view('message.member_register');
+    }
 }
