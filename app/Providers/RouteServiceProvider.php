@@ -46,6 +46,10 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+            //新增message路由設定
+            Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/message.php'));
         });
     }
 
