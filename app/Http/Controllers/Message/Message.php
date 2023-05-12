@@ -10,4 +10,9 @@ class Message extends Controller
     {
         return view('message.index');
     }
+
+    public function login()
+    {
+        return view('message.member_login');
+    }
 }
