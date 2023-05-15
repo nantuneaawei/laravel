@@ -20,4 +20,9 @@ class Message extends Controller
     {
         return view('message.member_register');
     }
+
+    public function member()
+    {
+        return view('message.member');
+    }
 }
