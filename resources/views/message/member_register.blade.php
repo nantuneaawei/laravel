@@ -35,14 +35,14 @@
                 </div>
                 <div id="err_pwd2"></div>
                 <div data-role="fieldcontain">
-                    <label for="Nickname">暱稱:</label>
-                    <input type="text" name="Nickname" id="Nickname" placeholder="請輸入暱稱">
+                    <label for="UserName">暱稱:</label>
+                    <input type="text" name="UserName" id="UserName" placeholder="請輸入暱稱">
                 </div>
-                <div id="err_Nickname"></div>
+                <div id="err_UserName"></div>
 
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a href="#" data-role="button" data-theme="a" data-icon="delete" onclick="history.back()">取消</a>
+                        <a href="login" data-role="button" data-theme="a" data-icon="delete">取消</a>
                     </div>
                     <div class="ui-block-b">
                         <a href="#" data-role="button" data-theme="b" data-icon="check" id="ok_btn">確認</a>
