@@ -4,13 +4,13 @@ $(document).ready(function(){
     var flag_pwd2     = false;
     var flag_UserName = false;
     
-    $('#ok_btn').click(function(e){
+    $('#register_btn').click(function(e){
         e.preventDefault();
         if(flag_Email && flag_password && flag_pwd2 && flag_UserName){
             var dataJSON = {};
-            dataJSON["Email"]    = $("#Email").val();
-            dataJSON["Password"] = $("#password").val();
-            dataJSON["UserName"] = $("#UserName").val(); 
+            dataJSON["Email"]    = $("#rEmail").val();
+            dataJSON["Password"] = $("#rpassword").val();
+            dataJSON["UserName"] = $("#rUserName").val(); 
             $.ajax({
                 type: 'POST',
                 url: 'registerMember',
@@ -36,11 +36,11 @@ $(document).ready(function(){
     });
 
     //即時監聽    信箱
-    $("#Email").bind("input propertychange",function()
+    $("#rEmail").bind("input propertychange",function()
     {
         if($(this).val().length < 31 && $(this).val().length > 10){
             var jsonData = {
-                'Email': $("#Email").val()
+                'Email': $("#rEmail").val()
             };
             $.ajax({
                 type: 'GET',
@@ -50,13 +50,13 @@ $(document).ready(function(){
                 success: function(data){
                     if(data.state){
                         //信箱不存在, 可以以使用此信箱
-                        $("#err_Email").html(data.message);
-                        $("#err_Email").css("color", "green");
+                        $("#err_rEmail").html(data.message);
+                        $("#err_rEmail").css("color", "green");
                         flag_Email = true;
                     }else{
                         //信箱存在, 不可以以使用此信箱
-                        $("#err_Email").html(data.message);
-                        $("#err_Email").css("color", "red");
+                        $("#err_rEmail").html(data.message);
+                        $("#err_rEmail").css("color", "red");
                         flag_Email = false;
                     }
                 },
@@ -66,58 +66,62 @@ $(document).ready(function(){
             });                    
         }
         else{
-            $("#err_Email").html("字數不符合規定!");
-            $("#err_Email").css("color","#F00");
+            $("#err_rEmail").html("字數不符合規定!");
+            $("#err_rEmail").css("color","#F00");
             flag_Email = false;
         }
         
     });
 
     //即時監聽    密碼
-    $("#password").bind("input propertychange",function()
+    $("#rpassword").bind("input propertychange",function()
     {
-        if($("#password").val().length < 9 && $("#password").val().length > 3){
-            $("#err_password").html("符合規定");
-            $("#err_password").css("color","#0E0");
+        if($("#rpassword").val().length < 9 && $("#rpassword").val().length > 3){
+            $("#err_rpassword").html("符合規定");
+            $("#err_rpassword").css("color","#0E0");
             flag_password = true;
         }
         else{
-            $("#err_password").html("字數不符合規定!");
-            $("#err_password").css("color","#F00");
+            $("#err_rpassword").html("字數不符合規定!");
+            $("#err_rpassword").css("color","#F00");
             flag_password = false;
         }
         
     });
 
     //即時監聽    確認密碼
-    $("#pwd2").bind("input propertychange",function()
+    $("#rpwd2").bind("input propertychange",function()
     {
-        if($("#pwd2").val() == $("#password").val()){
-            $("#err_pwd2").html("與密碼相同");
-            $("#err_pwd2").css("color","#0E0");
+        if($("#rpwd2").val() == $("#rpassword").val()){
+            $("#err_rpwd2").html("與密碼相同");
+            $("#err_rpwd2").css("color","#0E0");
             flag_pwd2 = true;
         }
         else
         {
-            $("#err_pwd2").html("與密碼不符合");
-            $("#err_pwd2").css("color","#F00");
+            $("#err_rpwd2").html("與密碼不符合");
+            $("#err_rpwd2").css("color","#F00");
             flag_pwd2 = false;
         }
     });
 
     //即時監聽    暱稱
-    $("#UserName").bind("input propertychange",function()
+    $("#rUserName").bind("input propertychange",function()
     {
-        if($("#UserName").val().length < 11 && $("#UserName").val().length > 0){
-            $("#err_UserName").html("符合規定");
-            $("#err_UserName").css("color","#0E0");
+        if($("#rUserName").val().length < 11 && $("#rUserName").val().length > 0){
+            $("#err_rUserName").html("符合規定");
+            $("#err_rUserName").css("color","#0E0");
             flag_UserName = true;
         }
         else{
-            $("#err_UserName").html("字數不符合規定!");
-            $("#err_UserName").css("color","#F00");
+            $("#err_rUserName").html("字數不符合規定!");
+            $("#err_rUserName").css("color","#F00");
             flag_UserName = false;
         }
         
+    });
+
+    $('#login').bind("click", function () {
+        location.href = "login";
     });
 });

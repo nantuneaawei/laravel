@@ -36,7 +36,7 @@
                 <div id="err_pwd2"></div>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a href="register" data-role="button" data-theme="a" data-icon="plus" id="register">註冊</a>
+                        <a href="#" data-role="button" data-theme="a" data-icon="plus" id="register">註冊</a>
                     </div>
                     <div class="ui-block-b">
                         <a href="#" data-role="button" data-theme="b" data-icon="check" id="ok_btn">登入</a>

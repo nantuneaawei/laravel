@@ -20,32 +20,32 @@
             </div>
             <div role="main" class="ui-content">
                 <div data-role="fieldcontain">
-                    <label for="Email">信箱:</label>
-                    <input type="text" name="Email" id="Email" placeholder="請輸入信箱">
+                    <label for="rEmail">信箱:</label>
+                    <input type="text" name="rEmail" id="rEmail" placeholder="請輸入信箱">
                 </div>
-                <div id="err_Email"></div>
+                <div id="err_rEmail"></div>
                 <div data-role="fieldcontain">
-                    <label for="password">密碼:</label>
-                    <input type="password" name="password" id="password" placeholder="字數4~8個字">
+                    <label for="rpassword">密碼:</label>
+                    <input type="password" name="rpassword" id="rpassword" placeholder="字數4~8個字">
                 </div>
-                <div id="err_password"></div>
+                <div id="err_rpassword"></div>
                 <div data-role="fieldcontain">
-                    <label for="pwd2">確認密碼:</label>
-                    <input type="password" name="pwd2" id="pwd2" placeholder="確認密碼">
+                    <label for="rpwd2">確認密碼:</label>
+                    <input type="password" name="rpwd2" id="rpwd2" placeholder="確認密碼">
                 </div>
-                <div id="err_pwd2"></div>
+                <div id="err_rpwd2"></div>
                 <div data-role="fieldcontain">
-                    <label for="UserName">暱稱:</label>
-                    <input type="text" name="UserName" id="UserName" placeholder="請輸入暱稱">
+                    <label for="rUserName">暱稱:</label>
+                    <input type="text" name="rUserName" id="rUserName" placeholder="請輸入暱稱">
                 </div>
-                <div id="err_UserName"></div>
+                <div id="err_rUserName"></div>
 
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a href="login" data-role="button" data-theme="a" data-icon="delete">取消</a>
+                        <a href="#" data-role="button" data-theme="a" data-icon="delete" id="login">取消</a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#" data-role="button" data-theme="b" data-icon="check" id="ok_btn">確認</a>
+                        <a href="#" data-role="button" data-theme="b" data-icon="check" id="register_btn">確認</a>
                     </div>
                 </div>
 
