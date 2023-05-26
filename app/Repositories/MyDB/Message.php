@@ -23,9 +23,18 @@ class Message
     public function checkEmail($_sEmail)
     {
         $iCheckEmail = $this->oMessageModels
-        ->where('Email', '=', $_sEmail)
-        ->count();
+            ->where('Email', '=', $_sEmail)
+            ->count();
 
         return $iCheckEmail;
+    }
+
+    public function loginMember($_sEmail, $_sPassword)
+    {
+        $iMemberlogin = $this->oMessageModels
+            ->where(['Email' => $_sEmail,'Password' => $_sPassword])
+            ->count();
+
+        return $iMemberlogin;
     }
 }

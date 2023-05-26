@@ -40,4 +40,18 @@ class Message
         }
         return ['state' => $bState, 'message' => $sResult];
     }
+
+    public function loginMember($_sEmail, $_sPassword)
+    {
+        $iMemberlogin = $this->oMessageRepositories->loginMember($_sEmail, $_sPassword);
+        if ($iMemberlogin == 1) {
+            $sResult = "登入成功!";
+            $bState = true;
+        } else {
+            $sResult = "登入失敗!";
+            $bState = false;
+        }
+
+        return ['state' => $bState, 'message' => $sResult];
+    }
 }

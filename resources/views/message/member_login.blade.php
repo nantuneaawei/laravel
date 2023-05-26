@@ -20,26 +20,26 @@
             </div>
             <div role="main" class="ui-content">
                 <div data-role="fieldcontain">
-                    <label for="Email">信箱:</label>
-                    <input type="text" name="Email" id="Email" placeholder="字數4~8個字">
+                    <label for="lEmail">信箱:</label>
+                    <input type="text" name="lEmail" id="lEmail" placeholder="字數11~30個字">
                 </div>
-                <div id="err_Email"></div>
+                <div id="err_lEmail"></div>
                 <div data-role="fieldcontain">
-                    <label for="password">密碼:</label>
-                    <input type="password" name="password" id="password" placeholder="字數4~8個字">
+                    <label for="lpassword">密碼:</label>
+                    <input type="password" name="lpassword" id="lpassword" placeholder="字數4~8個字">
                 </div>
-                <div id="err_password"></div>
+                <div id="err_lpassword"></div>
                 <div data-role="fieldcontain">
-                    <label for="pwd2">確認密碼:</label>
-                    <input type="password" name="pwd2" id="pwd2" placeholder="確認密碼">
+                    <label for="lpwd2">確認密碼:</label>
+                    <input type="password" name="lpwd2" id="lpwd2" placeholder="確認密碼">
                 </div>
-                <div id="err_pwd2"></div>
+                <div id="err_lpwd2"></div>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <a href="#" data-role="button" data-theme="a" data-icon="plus" id="register">註冊</a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#" data-role="button" data-theme="b" data-icon="check" id="ok_btn">登入</a>
+                        <a href="#" data-role="button" data-theme="b" data-icon="check" id="login_btn">登入</a>
                     </div>
                 </div>
             </div>

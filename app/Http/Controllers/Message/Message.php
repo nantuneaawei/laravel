@@ -61,4 +61,17 @@ class Message extends Controller
         $sMessage = $aResult['message'];
         return response()->json(['state' => $bState, 'message' => $sMessage]);
     }
+
+    public function loginMember(Request $_oRequest)
+    {
+        $sEmail     = $_oRequest->input('Email');
+        $sPassword  = $_oRequest->input('Password');
+
+        $aResult = $this->oMessageServices->loginMember($sEmail, $sPassword);
+        
+        $bState = $aResult['state'];
+        $sMessage = $aResult['message'];
+
+        return response()->json(['state' => $bState, 'message' => $sMessage]);
+    }
 }

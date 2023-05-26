@@ -9,5 +9,6 @@ Route::get('/register', [Message::class, 'register']);
 Route::post('/registerMember',[Message::class, 'registerMember']);
 Route::get('/checkEmail',[Message::class, 'checkEmail']);
 
+Route::post('/loginMember',[Message::class, 'loginMember']);
 
 Route::get('/member', [Message::class, 'member']);
